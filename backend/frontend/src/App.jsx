@@ -23,7 +23,21 @@ const App = () => {
     <div className="App">
       {!sent ? (
         <>
-          <h1></h1>
+          <h1>Website to PDF</h1>
+          <form onSubmit={() => sendUrl()} className="form">
+            <input
+              placeholder="Enter the Url"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              className="input"
+              required
+            ></input>
+            <input
+              placeholder="Enter the name for The pdf"
+              value={name}
+              required
+            ></input>
+          </form>
         </>
       ) : (
         <>
