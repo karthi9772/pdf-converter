@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import "./App.css";
 
 const App = () => {
   const [url, setUrl] = useState("");
@@ -23,7 +24,8 @@ const App = () => {
     <div className="App">
       {!sent ? (
         <>
-          <h1>Website to PDF</h1>
+          <h1 className="title">Website to PDF</h1>
+          <h3 className="sub-title">You Can Convert Any webSite into a PDF</h3>
           <form onSubmit={sendUrl} className="form">
             <input
               placeholder="Enter the Url"
@@ -34,18 +36,21 @@ const App = () => {
               type="text"
             ></input>
             <input
+              className="input"
               placeholder="Enter the name for The pdf"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
               type="text"
             ></input>
-            <button type="submit">Submit</button>
+            <button className="button" type="submit">
+              Submit
+            </button>
           </form>
         </>
       ) : (
         <>
-          <h1>Pdf Created</h1>
+          <h1 className="done">Pdf Created</h1>
         </>
       )}
     </div>

@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background-color: cornflowerblue;
+  width: 100%;
+  height: 100vh;
+}
+
+.form {
+  margin: auto;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.input {
+  padding: 16px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.input:focus {
+  border: none;
+}
+
+.button {
+  border: 1px black solid;
+  border-radius: 20px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  background-color: cadetblue;
+}
+
+.title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 50px;
+}
+.sub-title {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
