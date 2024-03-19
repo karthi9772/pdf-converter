@@ -11,7 +11,7 @@ const App = () => {
     setSent(true);
 
     try {
-      await axios.post("https://localhost:4000/get_text", {
+      await axios.post("http://127.0.0.1:8000/get_pdf", {
         url,
         name,
       });
@@ -24,19 +24,23 @@ const App = () => {
       {!sent ? (
         <>
           <h1>Website to PDF</h1>
-          <form onSubmit={() => sendUrl()} className="form">
+          <form onSubmit={sendUrl} className="form">
             <input
               placeholder="Enter the Url"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
               className="input"
               required
+              type="text"
             ></input>
             <input
               placeholder="Enter the name for The pdf"
               value={name}
+              onChange={(e) => setName(e.target.value)}
               required
+              type="text"
             ></input>
+            <button type="submit">Submit</button>
           </form>
         </>
       ) : (
